@@ -86,7 +86,7 @@ def scanFile(filePath, options):
         procMsg = bcolors.FAIL + "  - Deleting..." + bcolors.ENDC
         print(procMsg, end='')
         os.remove(filePath)
-        print(" - Done")
+        print(" - Done", end='')
 
       if ("" != destPath):
         if ("/" != destPath[-1:]):
@@ -95,8 +95,9 @@ def scanFile(filePath, options):
         procMsg = bcolors.OKGREEN + "  - Moving..." + bcolors.ENDC
         print(procMsg, end='')
         shutil.move(filePath, destPath)
-        print(" - Done")
+        print(" - Done", end='')
 
+      print("")
       isInfected = True
       break
 
