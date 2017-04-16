@@ -17,10 +17,14 @@ Next릴에 성인광고를 검출하거나 검출한 파일을 삭제 또는 지
 3번의 항목들이 이미 설치되어 있는 경우 이 단계는 생략 가능합니다.
 
 ## Python 설치
-    sudo apt-get install python3
+  ```
+  sudo apt-get install python3
+  ```
 
 ## Third-party library 설치
-    pip3 intsall moviepy pillow pytesseract
+  ```
+  pip3 intsall moviepy pillow pytesseract
+  ```
     
 ## 5. 실행 방법
 * 기본 실행방법은 아래와 같습니다.
@@ -57,7 +61,7 @@ Next릴에 성인광고를 검출하거나 검출한 파일을 삭제 또는 지
   find <검색할 경로> -mtime -1 -type f | sed 's/[^[[:alnum:]]/\\&/g' | xargs python3 ./scanvideo.py --r
   ```
 
-* find 명령어와 파이프를 통해 해당 경로의 생성일자가 1일 전인 모든 파일에 대해 검사 후 검출된 파일은 설정한 경로로 이동합니다.
-  ```
-  find <검색할 경로> -mtime -1 -type f | sed 's/[^[[:alnum:]]/\\&/g' | xargs python3 ./scanvideo.py --i /var/www/infected/
+* find 명령어와 파이프를 통해 해당 경로의 생성일자가 1일 전인 모든 파일에 대해 검사 후 검출된 파일은 설정한 경로로 이동합니다. 2일 전의 파일을 검사하고 싶은 경우 find 명령어 옵션의 -mtime -1을 -mtime -2로 변경하면 됩니다.
+  ```
+  find <검색할 경로> -mtime -1 -type f | sed 's/[^[[:alnum:]]/\\&/g' | xargs python3 ./scanvideo.py --i ./infected/
   ```
