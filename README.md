@@ -61,7 +61,7 @@ Next릴에 성인광고를 검출하거나 검출한 파일을 삭제 또는 지
   find <검색할 경로> -mtime -1 -type f | sed 's/[^[[:alnum:]]/\\&/g' | xargs python3 ./scanvideo.py --r
   ```
 
-* find 명령어와 파이프를 통해 해당 경로의 생성일자가 1일 전인 모든 파일에 대해 검사 후 검출된 파일은 설정한 경로로 이동합니다. 2일 전의 파일을 검사하고 싶은 경우 find 명령어 옵션의 -mtime -1을 -mtime -2로 변경하면 됩니다.
+* find 명령어와 파이프를 통해 해당 경로의 생성일자가 1일 전인 모든 파일에 대해 검사 후 검출된 파일은 설정한 경로로 이동합니다.
   ```
   find <검색할 경로> -mtime -1 -type f | sed 's/[^[[:alnum:]]/\\&/g' | xargs python3 ./scanvideo.py --i ./infected/
   ```
