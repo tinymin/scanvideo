@@ -16,12 +16,12 @@ Next릴에 성인광고를 검출하거나 검출한 파일을 삭제 또는 지
 ## 4. 설정 방법
 3번의 항목들이 이미 설치되어 있는 경우 이 단계는 생략 가능합니다.
 
-## Python 설치
+### Python 설치
   ```
   sudo apt-get install python3
   ```
 
-## Third-party library 설치
+### Third-party library 설치
   ```
   pip3 intsall moviepy pillow pytesseract
   ```
