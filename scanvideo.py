@@ -16,7 +16,7 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 def help():
-  print("** scanpoor.py")
+  print("** scanvideo.py")
   print("")
   print("Usage : python3 vailadTxtFromImg.py [Options] <Video File>")
   print("Usage : python3 vailadTxtFromImg.py [Options] <Video File1> <Video File2> <Video File3>...")
