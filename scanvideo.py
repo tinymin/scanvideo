@@ -59,8 +59,9 @@ def scanFile(filePath, options):
 
   isInfected = False
   fileName = os.path.basename(filePath)
+  print(fileName)
   destPath = options["destPath"]
-  chkFrames = options["chkFrames"] if(len(options["chkFrames"]) !=0) else [4, 3, 2, 1, 0] # 디폴트 체크 프레임 [4, 3, 2, 1, 0]
+  chkFrames = options["chkFrames"] if(len(options["chkFrames"]) !=0) else [5, 4, 3, 2] # 디폴트 체크 프레임 [5, 4, 3, 2]
   isTestMode = options["isTestMode"]
   duration = int(video.duration)
   if(True == isTestMode):
